@@ -5,13 +5,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="index.css">
-
+    <link 
+    href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+    rel="stylesheet"  type='text/css'>    <link rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:wght@300&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <title>Kenan Korn</title>
     <script
       src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"
@@ -251,12 +254,61 @@
     <br>
     <h2 id="contact" class="has-text-centered">Contact Me</h2>
     <hr>
+    <div class="box" id="contactbox">
+    <form action="" method="post" id="contact-form">
+      <input type="hidden" name="contact_number">
+      <div class="field">
+          <label for="name" class="label is-size-4 has-text-weight-light"></label>
+          <div class="control has-icons-left">
+              <input type="text" name="user_name" id="name" class="input" placeholder="Name" autofocus>
+                  <span class="icon is-left">
+                    <i class="fa fa-user" title="Edit"></i>
+                  </span>
+          </div>
+      </div>
+      <div class="field">
+          <label for="email" class="label is-size-4 has-text-weight-light"></label>
+          <div class="control has-icons-left">
+            <span class="icon is-left" id="icon">
+              <i class="fa fa-envelope" title="email"></i>
+            </span>
+              <input type="email" name="user_email" id="email" class="input" placeholder="Email">
+                 
+          </div>
+      </div>
+      <div class="field">
+          <label for="message" class="label is-size-4 has-text-weight-light"></label>
+          <textarea name="message" id="message" rows="5" class="textarea is-medium" placeholder="Message"></textarea>
+      </div>
+      <button type="button" id="submitform" onclick="sendmail()" class="button is-primary">Submit</button>
+  </form>
+  </div>
+  <article class="message is-success" id="successemail">
+    <div class="message-header">
+      <p>Success</p>
+      <button class="delete" aria-label="delete"></button>
+    </div>
+    <div class="message-body" id="email_display">
+    </div>
+  </article>
+  <article class="message is-danger" id="failedemail">
+    <div class="message-header">
+      <p>Success</p>
+      <button class="delete" aria-label="delete"></button>
+    </div>
+    <div class="message-body">
+      An error occured when submitting email.
+      <br>
+      Please refresh page and try again.
+    </div>
+  </article>
     <br><br>
     <footer>
       <p>Developed by Kenan Korn ®2021 &nbsp;</p>
         <button class="button is-dark" onclick="darkMode()">Dark Mode</button>
         <button class="button is-light" onclick="lightMode()">Light Mode</button>
     </footer>
+    <script type="text/javascript" src="email.js"></script>
     <script>
       new GitHubCalendar(".calendar", "Kenanafkaof");
     </script>

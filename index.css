@@ -14,6 +14,9 @@ body.dark-mode #githubbox {
     background-color:black;
     color:white;
 }
+body.dark-mode #contactbox {
+  background-color:black;
+}
 body.dark-mode span {
   color:white;
 }
@@ -77,7 +80,7 @@ body.dark-mode #ndlink {
   color:#1C73C6;
 }
 body.dark-mode #ndlink:hover {
-  color:white;
+  color:black;
 }
 body.dark-mode .popup-text{
     color:black;
@@ -471,4 +474,10 @@ z-index:10000;
   margin: 20px;
   display: inline-block;
   font-weight: bold;
+}
+#successemail {
+  display:none;
+}
+#failedemail{
+  display:none;
 }
