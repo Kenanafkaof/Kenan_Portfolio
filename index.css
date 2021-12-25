@@ -135,7 +135,16 @@ body.dark-mode .popup-text{
     background-color: black;
     color:white;
   }
-
+@media screen and (max-width: 759px) {
+  #card {
+    text-align: center;
+    margin-left: auto;
+  }
+  #boxmedia {
+    text-align: center;
+    margin-left: auto;
+  }
+}
 @media screen and (min-width: 760px) {
   .calendar {
     width:80%;
@@ -144,6 +153,10 @@ body.dark-mode .popup-text{
     display:none;
   }
   #card {
+    text-align: center;
+    margin-left: auto;
+  }
+  #boxmedia {
     text-align: center;
     margin-left: auto;
   }
