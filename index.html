@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="index.css">
+    <meta name="referrer" content="strict-origin" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <link 
     href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
     rel="stylesheet"  type='text/css'>    <link rel="stylesheet">
@@ -36,6 +38,9 @@
 
   </head>
   <body>
+    <div id="loading">
+      <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
     <nav align="center">
         <div class="navbar-brand">
           <div class="navbar-burger" data-target="navbarExampleTransparentExample">
@@ -45,7 +50,7 @@
           </div>
         <div id="navbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item" href="">
+            <a class="navbar-item" href="#about">
               Home
             </a>
             <a class="navbar-item" href="#about">
@@ -60,10 +65,13 @@
             <a class="navbar-item" href="#github">
                 Resources
             </a>
-            <a class="navbar-item" href="#contact">
+            <a class="navbar-item" href="#contactbox">
               Contact Me
             </a>
+            <button class="button is-small is-dark" onclick="darkMode()" id="navbutton"><i class="fas fa-moon"></i></button>
+            <button class="button is-small is-light" onclick="lightMode()" id="navbutton"><i class="fas fa-sun"></i></button>
             </div>
+            
           </div>
         </div>
     </nav>
@@ -92,85 +100,76 @@
     <br>
     <h2 id="public" class="has-text-centered">Public Projects</h2>
     <hr>
-    <div class="box" id="box">
-      <article class="media">
-        <div class="media-left">
-          <figure class="image is-128x128">
-            <img src="https://images.squarespace-cdn.com/content/v1/530800ece4b039a663af0a49/1581716267997-6SRCVR2JO08APC9WWY5C/IMG_1888.jpg?format=750w" alt="Image">
-          </figure>
+    <div class='columns is-mobile is-centered' id="card">
+        <div class="card" id="box">
+          <div class="card-content">
+            <div class="media">
+                <figure class="image">
+                  <img src="https://images.squarespace-cdn.com/content/v1/530800ece4b039a663af0a49/1546975219958-ELJQP0E3KRGPV5UZZLZX/IMG_1888.jpg" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <strong class="ndhope">NDHope</strong> <br><a id="ndlink" href="https://www.ndhope.org/" target="_blank"> @ndhope.org</a>
+                <p class='is-success'>
+                  Only frotend developer responsible for migrating assets from the old site as well as developing this new site. While I was still learning front-end at this time, the project went well and the team was extremely pleased with the final result. While the website was built with a simple framework through the Wix API, it did take quite a few front-end/web-development skills to be made.
+                </p>
+              </div>
+            </div>  
         </div>
-        <div class="media-content">
-          <div class="content">
-            <p>
-              <strong class="ndhope">ND Hope</strong> <a id="ndlink" href="https://www.ndhope.org/"> @ndhope.org</a>
-              <br>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-            </p>
+      </div>
+    </div>
+    <br>
+    <div class='columns is-mobile is-centered' id="card">
+      <div class="card" id="box2">
+        <div class="card-content">
+          <div class="media">
+              <figure class="image">
+                <img src="http://www.moroccotriptravel.com/gallery/footer/01.jpg" alt="Placeholder image">
+              </figure>
             </div>
-          </div>
-          <nav class="level is-mobile">
-            <div class="level-left">
-
-
-              </a>
+            <div class="media-content">
+              <strong class="mtt">Morocco Trip Travel</strong> <br><a id="mttlink" href="http://www.moroccotriptravel.com" target="_blank"> @moroccotriptravel.com</a>
+              <p class='is-success'>
+                Responsible for translation as well as foreign optimization of the website. Employed my language skills in order to make the website appeal to foreign tourists. In addition to translation, I worked on query terms as well as google search population for the website to ensure that more toursits could find the agency on the internet. This project was rather simple, but required various skills and depended upon my knowledge of Darija/Arabic to translate into French and English.
+              </p>
             </div>
-          </nav>
-        </div>
+          </div>  
+      </div>
+    </div>
+    <br>
+    <div class='columns is-mobile is-centered' id="card">
+      <div class="card" id="box">
+        <div class="card-content">
+          <div class="media">
+              <figure class="image">
+                <img id="cake" src="https://static.wixstatic.com/media/811e70_4e8de38b66bf470bb3065f0f5f3eccde~mv2_d_1537_2049_s_2.jpg/v1/fill/w_1080,h_600,al_c,q_85,usm_0.66_1.00_0.01/811e70_4e8de38b66bf470bb3065f0f5f3eccde~mv2_d_1537_2049_s_2.webp" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="media-content">
+              <strong class="ndhope">Humming Bird Confections</strong> <br><a id="ndlink" href="https://www.hummingbird-confections.com/" target="_blank"> @hummingbird-confections.com</a>
+              <p class='is-success'>
+                A more recent project which again depended upon the Wix API (by request of the client) and required various html/js skills to comprehend the API documentation. While the website is not optimized for different screen sizes, it was challenging to create and has an intricate backend/frontend.
+              </p>
+            </div>
+          </div>  
+      </div>
+    </div>
+  </div>
       </article>
     </div>
-    <div class="box" id="box2">
-      <article class="media">
-        <div class="media-left">
-          <figure class="image is-128x128">
-            <img class="has-ratio" src="http://www.moroccotriptravel.com/gallery/footer/01.jpg" alt="Image">
-          </figure>
-        </div>
-        <div class="media-content">
-          <div class="content">
-            <p>
-              <strong id="mtt">Morocco Trip Travel</strong> <a id="mttlink" href="http://www.moroccotriptravel.com/"> @moroccotriptravel.com</a></small> 
-              <br>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-            </p>
-            </div>
-          </div>
-          <nav class="level is-mobile">
-            <div class="level-left">
 
-            </div>
-          </nav>
-        </div>
       </article>
     </div>
-    <div class="box" id="box">
-      <article class="media">
-        <div class="media-left">
-          <figure class="image is-128x128">
-            <img class="has-ratio" src="https://static.wixstatic.com/media/7206af_8815db60b5f74493a41da8dc767b67a6~mv2.png/v1/fill/w_612,h_236,al_c,q_85,usm_0.66_1.00_0.01/test2.webp" alt="Image">
-          </figure>
-        </div>
-        <div class="media-content">
-          <div class="content">
-            <p>
-              <strong class="ndhope">Humming Bird Confections</strong> <a id="ndlink" href="https://www.hummingbird-confections.com/"> @hummingbird-confections.com</a></small> 
-              <br>
-              Main frontend developer, responsible for the creation of the backend as well as frontend. This project was an early development which depended upon learning the Wix API as well as fiding payment processing solutions.
-            </p>
-            </div>
-          </div>
-          <nav class="level is-mobile">
-            <div class="level-left">
-            </div>
-          </nav>
-        </div>
+
       </article>
     </div>
+    <br>
     <h2 id="personal" class="has-text-centered">Personal Projects</h2>
     <hr>
     <div class="row">
       <div class="column" id="column1">
-        <h2><a href="https://stock-api-kenan.herokuapp.com/">Stock API Platform</a></h2>
-        <p>API which was built utilizing a flask backend framework with a bulma frontend. </p>
+        <h2><a href="https://stock-api-kenan.herokuapp.com/" target="_blank">Stock API Platform</a></h2>
+        <p>API which was built utilizing a flask backend framework with a bulma frontend.</p>
         <a class="trigger_popup_fricc" align="center">More details</a>
       </div>
       <div class="hover_bkgr_fricc">
@@ -184,7 +183,7 @@
         </div>
       </div>
       <div class="column" id="column2">
-        <h2><a href="https://www.komukllc.com">Trojan Check Automation</a></h2>
+        <h2><a href="https://www.komukllc.com" target="_blank">Trojan Check Automation</a></h2>
         <p>Uses selenium, then proceeds to a requests session to complete the "Trojan Check."</p>
         <a class="trigger_popup_fricc2" align="center">More details</a>
       </div>
@@ -201,7 +200,7 @@
         </div>
       </div>
       <div class="column" id="column3">
-        <h2><a href="kenankorn.com">Request Based Bot</a></h2>
+        <h2><a href="https://www.kenankorn.com" target="_blank">Request Based Bot</a></h2>
         <p>Fully request based and intricate automation software to purchase in-demand items.</p>
         <a class="trigger_popup_fricc3" align="center">More details</a>
       </div>
@@ -219,17 +218,23 @@
             <p>In addition to this information, utilizing as well as querying/stringifying JSON has been complex, yet of paramount importance within this project. I am now extremely confident with the culmination of requests, cookies, sessions, proxies, and above all manipulating APIs.</p>
         </div>
       </div>
-    </div>
+  </div>
     <br>
     <h2 id="github" class="has-text-centered">Resources</h2>
     <hr>
     <div class="calendar">
      Loading profile...
     </div>
-    <div class="errorloading">
-      <p>Error loading github data due to screen size!</p>
-      <br>
-    </div>
+
+    <article class="message is-danger" id="loadingerror">
+      <div class="message-header">
+        <p>Error</p>
+        <button class="delete" onclick="deletediv()" aria-label="delete"></button>
+      </div>
+      <div class="message-body">
+        Could not load GitHub content due to screen size.
+      </div>
+    </article>
     <br>
     <div class="box" id="githubbox">
       <article class="media">
@@ -241,18 +246,19 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <a href="https://stock-api-kenan.herokuapp.com/">Github Profile  </a><small>@Kenanafkaof</small>
+              <a href="https://github.com/Kenanafkaof">Github Profile  </a>
               <br>
               Check out my projects on GitHub! Many projects are in private repositories, so make sure to contact if interested!
             </p>
-            <a href="https://github.com/Kenanafkaof" class="button is-primary">View Github</a>
+            <a href="https://github.com/Kenanafkaof" target="_blank" class="button is-primary" id="buttonclick">View Github<i class="fa fa-external-link" title="Navigate" id="external"></i></a>
+
           </div>
 
         </div>
       </article>
     </div>
     <br>
-    <h2 id="contact" class="has-text-centered">Contact Me</h2>
+    <h2 id="contactme" class="has-text-centered">Contact Me</h2>
     <hr>
     <div class="box" id="contactbox">
     <form action="" method="post" id="contact-form">
@@ -278,15 +284,16 @@
       </div>
       <div class="field">
           <label for="message" class="label is-size-4 has-text-weight-light"></label>
-          <textarea name="message" id="message" rows="5" class="textarea is-medium" placeholder="Message"></textarea>
+          <textarea name="message" id="message" rows="3" class="textarea is-medium" placeholder="Message"></textarea>
       </div>
       <button type="button" id="submitform" onclick="sendmail()" class="button is-primary">Submit</button>
+
   </form>
   </div>
   <article class="message is-success" id="successemail">
     <div class="message-header">
       <p>Success</p>
-      <button class="delete" aria-label="delete"></button>
+      <button class="delete" onclick="deletediv3()" aria-label="delete"></button>
     </div>
     <div class="message-body" id="email_display">
     </div>
@@ -294,7 +301,7 @@
   <article class="message is-danger" id="failedemail">
     <div class="message-header">
       <p>Success</p>
-      <button class="delete" aria-label="delete"></button>
+      <button class="delete" onclick="deletediv2()"  aria-label="delete"></button>
     </div>
     <div class="message-body">
       An error occured when submitting email.
@@ -302,17 +309,39 @@
       Please refresh page and try again.
     </div>
   </article>
-    <br><br>
+  <div class="box" id="contactbox">
+    <article class="media">
+      <div class="media-left">
+      </div>
+      <div class="media-content">
+        <div class="content" id="contactinformation">
+            <h2 id="contacttitle">Contact Information  </h2>
+            <strong>Personal Email: </strong>kenan@kenankorn.com
+            <br>
+            <strong>Catchall: </strong>info@kenankorn.com
+          </p>
+          <a href="https://twitter.com/KornKmkorn" target="_blank" class="button is-primary" id="twitter">Twitter<i class="fa fa-external-link" title="Navigate" id="external"></i></a>
+          <a href="https://www.instagram.com/kenan_ko_/" target="_blank" class="button is-primary" id="instagram">Instagram<i class="fa fa-external-link" title="Navigate" id="external"></i></a>
+
+        </div>
+      </div>
+    </div>
+    <br><br><br>
     <footer>
       <p>Developed by Kenan Korn ®2021 &nbsp;</p>
-        <button class="button is-dark" onclick="darkMode()">Dark Mode</button>
-        <button class="button is-light" onclick="lightMode()">Light Mode</button>
+        <button class="button is-dark" onclick="darkMode()"><i class="fas fa-moon"></i></button>
+        <button class="button is-light" onclick="lightMode()"><i class="fas fa-sun"></i></button>
     </footer>
+    <script>window.scrollTo(0,0);</script>
     <script type="text/javascript" src="email.js"></script>
+    
     <script>
       new GitHubCalendar(".calendar", "Kenanafkaof");
     </script>
     <script>
+      setTimeout(function() {
+          $('#loading').hide();
+        }, 600);
       $(window).load(function () {
           $(".trigger_popup_fricc").click(function(){
             $('.hover_bkgr_fricc').show();

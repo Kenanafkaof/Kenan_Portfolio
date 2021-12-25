@@ -13,7 +13,18 @@ function hide (elements) {
       elements[index].style.display = specifiedDisplay || 'block';
     }
   }
+function deletediv () {
+  hide(document.getElementById('loadingerror'));
 
+}
+function deletediv2 () {
+  hide(document.getElementById('failedemail'));
+
+}
+function deletediv3 () {
+  hide(document.getElementById('successemail'));
+
+}
 function sendmail() {
     document.getElementById('submitform').classList.add('is-loading');
     let fullName = document.getElementById("name").value;
