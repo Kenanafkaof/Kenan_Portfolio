@@ -4,7 +4,19 @@ body {
   color: black;
   font-size: 25px;
 }
-
+@media screen and (min-width: 1050px) {
+  nav {
+      position: fixed; /* Set the navbar to fixed position */
+      top: 0; /* Position the navbar at the top of the page */
+      width: 100%; /* Full width */
+      font-family: 'Lato', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      overflow:hidden;
+  }
+}
 
 #header {
   font-size:100pt;
@@ -154,17 +166,7 @@ body.dark-mode .popup-text{
   }
   
 }
-@media screen and (min-width: 1050px) {
-    nav {
-        font-family: 'Lato', sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed; /* Set the navbar to fixed position */
-        top: 0; /* Position the navbar at the top of the page */
-        width: 100%; /* Full width */
-    }
-}
+
 nav {
     font-family: 'Lato', sans-serif;
 
@@ -200,6 +202,12 @@ nav {
   content: "";
   display: table;
   clear: both;
+}
+#card {
+  width:800px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
@@ -677,11 +685,20 @@ input {
     margin: 0 auto;
    }
 
-}
-#external {
-  margin-left:5px;
-}
+  }
+  #external {
+    margin-left:5px;
+  }
 
+
+  #navbutton {
+    margin-top:10px;
+    float: right;
+  }
+
+  body.dark-mode .message-body {
+    background-color: white;
+  }
 
 
 .image {
@@ -838,18 +855,3 @@ body.light-mode .lds-roller div:after {
 
 
 
-#card {
-  width:800px;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-#navbutton {
-  margin-top:10px;
-  float: right;
-}
-
-body.dark-mode .message-body {
-  background-color: white;
-}
