@@ -3,6 +3,7 @@ body {
   background-color: white;
   color: black;
   font-size: 25px;
+  overflow: hidden;
 }
 @media screen and (min-width: 1050px) {
   nav {
@@ -161,6 +162,9 @@ body.dark-mode .popup-text{
   #cake {
     height:300px;
   }
+  #contactbox {
+    margin-bottom:100px;
+  }
 }
 @media screen and (max-width: 925px) {
   .calendar {
@@ -176,8 +180,8 @@ body.dark-mode .popup-text{
   #githubbox {
     width:450px;
   }
-  .media-content {
-    margin-top:-200px;
+  #boxmedia {
+    margin-top:-170px;
   }
 
   
@@ -661,12 +665,17 @@ input {
     width:400px;
     margin: 0 auto;
   }
+
 }
 @media (min-width: 300px) {
   .card {
-    margin-left:30px;
+    margin-left:15px;
+  }
+  #githubbox {
+    width:400px;
   }
 }
+
 @media (min-width: 800px) {
   .box {
     width:900px;
