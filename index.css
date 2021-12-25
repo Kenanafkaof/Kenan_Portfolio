@@ -143,6 +143,10 @@ body.dark-mode .popup-text{
   #loadingerror {
     display:none;
   }
+  #card {
+    text-align: center;
+    margin-left: auto;
+  }
 
 }
 @media screen and (max-width: 850px) {
@@ -165,6 +169,10 @@ body.dark-mode .popup-text{
   #contactbox {
     margin-bottom:100px;
   }
+  #card {
+    text-align: center;
+  }
+
 }
 @media screen and (max-width: 925px) {
   .calendar {
@@ -175,16 +183,14 @@ body.dark-mode .popup-text{
     color:red;
   }
   .container {
-    width:150px;
-  }
-  #githubbox {
-    width:450px;
+    width:200px;
   }
   #boxmedia {
     margin-top:-170px;
   }
-
-  
+  #card {
+    text-align: center;
+  }
 }
 
 nav {
@@ -661,20 +667,13 @@ input {
 
 }
 @media (max-width: 799px) {
-  .card {
+  #card {
     width:400px;
-    margin: 0 auto;
+    text-align: center;
   }
+  
+}
 
-}
-@media (min-width: 300px) {
-  .card {
-    margin-left:15px;
-  }
-  #githubbox {
-    width:400px;
-  }
-}
 
 @media (min-width: 800px) {
   .box {
